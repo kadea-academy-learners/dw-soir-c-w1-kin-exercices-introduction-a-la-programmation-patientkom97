@@ -38,5 +38,6 @@ if (poidskg >= 10) {
 if (estUrgent === 1, 5) {
   tarifbase *= 1, 5;
 }
+
 }
 

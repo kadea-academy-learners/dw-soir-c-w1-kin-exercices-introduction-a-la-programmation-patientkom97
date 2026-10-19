@@ -284,7 +284,10 @@ Si tu essayes de faire un nouveau calcul avec ce résultat, JavaScript va coller
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+
+La méthode `.reduce()` sert à "réduire" un tableau à une seule valeur (comme un total, une multiplication ou un objet). Elle prend une fonction de rappel avec un accumulateur (qui garde en mémoire le résultat au fil des tours) et l'élément actuel.
+
+const totalHeures = heuresSemaine.reduce((accumulateur, heure) => accumulateur + heure, 0);
 
 **Mon test dans la console :**
 
@@ -302,7 +305,9 @@ Si tu essayes de faire un nouveau calcul avec ce résultat, JavaScript va coller
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+On peut passer un deuxième paramètre à la méthode `console.table()` sous forme de tableau de chaînes de caractères contenant les noms des colonnes à afficher :
+
+
 
 **Mon test dans la console :**
 
