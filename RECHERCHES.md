@@ -133,7 +133,10 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/for
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+## M1 — FizzBuzz kinois
+
+### Pourquoi FizzBuzz est-il célèbre dans les entretiens d'embauche de développeurs ?
+parce qu'il permet de repérer instantanément les candidats qui manquent totalement de bases logiques en programmation. 
 
 **Mon test dans la console :**
 
@@ -141,7 +144,7 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/for
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
-**Source :** 
+**Source :**https://megalodon.jp/2017-0307-0400-10/tickletux.wordpress.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/ 
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
