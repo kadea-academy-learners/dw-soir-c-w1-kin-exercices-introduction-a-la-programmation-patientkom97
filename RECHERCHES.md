@@ -29,15 +29,18 @@
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+ NaN; C'est l'acronyme de "Not a Number" (Pas un nombre). Malgré son nom, c'est une valeur numérique spéciale en JavaScript qui indique le résultat d'une opération mathématique invalide ou impossible (par exemple, convertir une lettre en nombre avec Number('abc') ou faire 0 / 0).
 
+Pourquoi NaN === NaN renvoie false ? C'est une règle définie par la norme internationale IEEE 754 pour les calculs informatiques. NaN représente une valeur indéfinie ou erronée ; logiquement, on ne peut pas affirmer qu'une erreur ou une valeur inconnue est strictement égale à une autre erreur ou valeur inconnue.
+
+Quelle fonction utiliser pour le détecter ? Il faut utiliser la méthode Number.isNaN() (ex: Number.isNaN(valeur)), qui permet de vérifier de manière fiable si une variable vaut exactement NaN sans provoquer de faux positifs.
 **Mon test dans la console :**
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
-**Source :** 
+**Source :**https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN 
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -47,7 +50,10 @@
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+En JavaScript, l'opérateur modulo conserve le signe du nombre de gauche (le dividende). Par conséquent, `-7 % 2` renvoie **`-1`** et non `1`.
+
+Si l'on teste si un nombre est impair avec `nombre % 2 === 1`, cela fonctionnera pour les nombres positifs, mais **ça échouera pour les nombres négatifs** (puisque `-7 % 2` donne `-1`, ce qui est différent de `1`). 
+En testant `nombre % 2 !== 0`, on capture tous les nombres impairs, qu'ils soient positifs ou négatifs.
 
 **Mon test dans la console :**
 
@@ -55,7 +61,7 @@
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
-**Source :** 
+**Source :**https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Remainder 
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
