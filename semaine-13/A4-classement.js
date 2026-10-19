@@ -22,4 +22,40 @@ Comment classer le bulletin de la meilleure à la moins bonne moyenne avec .sort
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
+const etudiants = [
+    { nom: "Amani", notes: [14, 16, 15] },
+    { nom: "Bijou", notes: [17, 18, 16] },
+    { nom: "Christian", notes: [8, 11, 9] },
+    { nom: "Divine", notes: [12, 10, 14] },
+    { nom: "Exaucé", notes: [16, 15, 19] }
+];
+const calculerMoyenne = (notes) => {
+    let total = 0;
+    for (let i = 0; i < notes.length; i++) {
+        total += notes[i];
+    }
+    return Math.round((total / notes.length) * 10) / 10;
+};
+const bulletin = etudiants.map(etudiant => {
+    const moyenne = calculerMoyenne(etudiant.notes);
+    let mention = "";
+    if (moyenne >= 16) {
+        mention = "Excellent";
+    } else if (moyenne >= 10) {
+        mention = "Admis";
+    } else {
+        mention = "Rattrapage";
+    }
+    return { nom: etudiant.nom, moyenne, mention };
+});
+console.table(bulletin);
+const admis = bulletin.filter(etudiant => etudiant.mention === "Excellent" || etudiant.mention === "Admis");
+console.log(`Nombre d'admis : ${admis.length}`);
+const premierExcellent = bulletin.find(etudiant => etudiant.mention === "Excellent");
+console.log(`Premier Excellent : ${premierExcellent.nom}`);
+
+console.table(bulletin);
+
+console.log(`Nombre d'admis : ${nombreAdmis}`);
+console.log(`Premier Excellent : ${premierExcellent ? premierExcellent.nom : "Aucun"}`);
 

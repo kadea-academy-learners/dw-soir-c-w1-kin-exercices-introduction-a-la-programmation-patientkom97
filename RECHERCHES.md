@@ -325,7 +325,9 @@ On peut passer un deuxième paramètre à la méthode `console.table()` sous for
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+
+Pour trier les moyennes par ordre décroissant (du plus grand au plus petit) :
+const bulletinTrie = bulletin.sort((a, b) => b.moyenne - a.moyenne);
 
 **Mon test dans la console :**
 

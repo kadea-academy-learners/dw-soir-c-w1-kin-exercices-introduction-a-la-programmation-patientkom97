@@ -53,3 +53,4 @@ const chercherProduit = (id) => {
 }
 const produitsEnRuptureDeStock = inventaire.filter(produit => produit.stock === 0).length;
 console.log(`Il y a ${produitsEnRuptureDeStock} produits en rupture de stock.`);
+console.table(produitsAvecPrixUSD);
