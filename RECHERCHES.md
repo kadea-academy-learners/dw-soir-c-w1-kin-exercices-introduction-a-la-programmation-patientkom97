@@ -89,15 +89,18 @@ En testant `nombre % 2 !== 0`, on capture tous les nombres impairs, qu'ils soien
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+On peut les enlever **uniquement lorsqu'il y a un et un seul paramètre** (par exemple : `const doubler = x => x * 2;`). Si la fonction n'a aucun paramètre (`() => ...`) ou a deux paramètres et plus (`(a, b) => ...`), les parenthèses sont obligatoires.
 
+On peut les enlever `return` et les accolades ensemble dans une **fonction à corps concis** (expression body) lorsque le code tient sur une seule ligne et retourne directement une valeur. 
+- Avec accolades `{ return ... }`, on a un bloc d'instructions (nécessaire s'il y a plusieurs lignes de code).
+- Sans accolades `=> expression`, le résultat de l'expression est **automatiquement retourné** (retour implicite).
 **Mon test dans la console :**
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Remainder 
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -107,7 +110,10 @@ En testant `nombre % 2 !== 0`, on capture tous les nombres impairs, qu'ils soien
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+Le mot-clé `continue` permet d'**interrompre l'itération en cours** d'une boucle (for, while, do...while) et de passer immédiatement à l'itération suivante, en sautant tout le code qui suit dans le bloc pour ce tour précis.
+
+- **`continue`** saute **un seul tour** de boucle et continue le reste de la répétition.
+- **`break`** stoppe et **casse complètement la boucle** d'un coup, sortant définitivement de celle-ci, peu importe le nombre de tours restants.
 
 **Mon test dans la console :**
 
@@ -115,7 +121,9 @@ En testant `nombre % 2 !== 0`, on capture tous les nombres impairs, qu'ils soien
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/continue 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/break 
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/for
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
