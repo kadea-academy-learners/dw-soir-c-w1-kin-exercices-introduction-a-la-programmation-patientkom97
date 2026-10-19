@@ -6,7 +6,7 @@ Objectif : construire un jeu complet avec while, prompt(), Number(), conditions 
 Contexte : le jeu de la pause déjeuner : deviner un nombre entre 1 et 100 en 7 essais maximum.
 
 Consignes :
-1. Tire un nombre entier aléatoire entre 1 et 100 avec Math.random() et Math.floor().
+1. Tire un nombre entier aléatoire entre 1 et 100 avec Math.random() et Math.floo r().
 2. Tant que le joueur n'a pas trouvé et qu'il lui reste des essais, demande un nombre avec prompt().
 3. Refuse une saisie qui n'est pas un nombre (sans compter l'essai).
 4. Réponds « plus grand », « plus petit » ou « trouvé en X essais ! ».
