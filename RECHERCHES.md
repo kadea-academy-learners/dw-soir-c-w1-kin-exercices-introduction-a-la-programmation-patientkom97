@@ -263,7 +263,10 @@
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+Les ordinateurs calculent en binaire (avec des 0 et des 1). Des nombres décimaux simples comme `0.1` ou `0.2` ne peuvent pas être écrits de façon exacte en binaire. JavaScript utilise donc une petite approximation, ce qui donne `0.30000000000000004` au lieu d'un `0.3` parfait.
+
+La méthode `.toFixed()` transforme ton nombre en **texte (string)**. 
+Si tu essayes de faire un nouveau calcul avec ce résultat, JavaScript va coller les textes ensemble au lieu de faire une vraie addition mathématique (par exemple, `"0.30" + 5` donnera `"0.305"` au lieu de `5.30`). Pour continuer à calculer, il faut le reconvertir en nombre.
 
 **Mon test dans la console :**
 
