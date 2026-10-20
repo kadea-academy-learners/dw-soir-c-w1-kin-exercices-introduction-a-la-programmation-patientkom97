@@ -51,3 +51,28 @@ const afficher = () => {
 };
 console.log(afficher());
 console.log(secret);
+
+
+// ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
+
+// --- Mes prédictions 
+// 1. "Kinshasa" va s'afficher grâce au premier console.log(ville).
+// 2. Le code va s'arrêter net sur une ReferenceError (commune is not defined) 
+//    car la variable `commune` déclarée avec `const` est enfermée dans le bloc `if` (portée de bloc).
+// 3. Le reste du code ne s'exécutera pas à cause de cette erreur.
+
+const ville = 'Kinshasa';
+
+if (true) {
+  const commune = 'Gombe';
+  console.log(ville);
+  console.log(commune);
+}
+
+const afficher = () => {
+  const secret = 'pondu';
+  return secret;
+};
+console.log(afficher());
+const secretRecupere = afficher();
+console.log(secretRecupere);
