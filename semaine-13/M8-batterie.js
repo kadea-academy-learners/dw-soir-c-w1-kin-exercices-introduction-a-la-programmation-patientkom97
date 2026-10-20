@@ -28,7 +28,6 @@ while (batterie > 20) {
     batterie -= 15;
     heures++;
 }
-
 console.log(`Après ${heures} h, batterie à ${batterie} % : branche ton téléphone !`);
 let batterieWhile = 15;
 let heuresWhile = 0;
