@@ -24,3 +24,7 @@ Que fait l'opérateur ?? (coalescence des nuls) et en quoi est-il différent de 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
 
+const afficherScoreBug = (score) => {
+    return `Score : ${score || 'aucun'}`;
+};
+console.log('avant correction :', afficherScoreBug(15), afficherScoreBug(0), afficherScoreBug(undefined));
