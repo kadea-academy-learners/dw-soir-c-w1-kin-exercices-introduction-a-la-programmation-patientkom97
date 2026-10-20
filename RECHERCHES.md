@@ -154,7 +154,11 @@ parce qu'il permet de repérer instantanément les candidats qui manquent totale
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+## M2 — Le distributeur automatique (DAB)
+
+### Comment afficher 75000 sous la forme 75 000 avec `toLocaleString()` ?
+Pour formater un nombre avec des espaces de séparation de milliers, on utilise la méthode `.toLocaleString('fr-FR')` :
+
 
 **Mon test dans la console :**
 
@@ -190,7 +194,10 @@ parce qu'il permet de repérer instantanément les candidats qui manquent totale
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+
+### Que fait l'opérateur `??` (coalescence des nuls) et en quoi est-il différent de `||` ?
+- **L'opérateur de coalescence des nuls (`??`)** retourne son opérande de droite si son opérande de gauche vaut `null` ou `undefined`. Sinon, il retourne l'opérande de gauche.
+- **Différence avec `||` (OU logique) :** L'opérateur `||` réagit à toutes les valeurs dites *falsy* en JavaScript (ce qui inclut `0`, `""` (chaîne vide), `false`, `NaN`, `null` et `undefined`). L'opérateur `??`, quant à lui, est beaucoup plus précis : il ne déclenche la valeur de secours **uniquement** pour `null` et `undefined`, ce qui permet de conserver des valeurs valides comme `0` ou `false`.
 
 **Mon test dans la console :**
 
@@ -198,7 +205,7 @@ parce qu'il permet de repérer instantanément les candidats qui manquent totale
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
-**Source :** 
+**Source :** https://share.google/aimode/UonPcobSn6DCxKT5V
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -207,8 +214,10 @@ parce qu'il permet de repérer instantanément les candidats qui manquent totale
 **Question :** Pourquoi var est-il banni du code moderne ? Cherche ce que sont la portée de fonction et le « hoisting ».
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+## M5 — La vitre teintée (portée de bloc)
 
-...
+### 1. Pourquoi `var` est-il banni du code moderne ?
+`var` est banni en JavaScript moderne (ES6+) parce qu'il possède une **portée de fonction** (function scope) et non une portée de bloc. Cela signifie qu'une variable déclarée avec `var` à l'intérieur d'un bloc (`if`, `for`, etc.) « fuit » à l'extérieur de ce bloc, ce qui provoque des confusions, des écrasements de variables et des bugs difficiles à détecter.
 
 **Mon test dans la console :**
 
@@ -226,7 +235,8 @@ parce qu'il permet de repérer instantanément les candidats qui manquent totale
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+### Qu'est-ce que l'insertion automatique de point-virgule (ASI) ?
+L'**ASI (Automatic Semicolon Insertion)** est un mécanisme par lequel le moteur JavaScript ajoute automatiquement un point-virgule à la fin d'une ligne s'il détecte un saut de ligne. C'est pourquoi placer un retour à la ligne juste après le mot-clé `return` transforme le code en `return;`, renvoyant immédiatement `undefined` et ignorant la suite de l'expression.
 
 **Mon test dans la console :**
 
@@ -243,8 +253,22 @@ parce qu'il permet de repérer instantanément les candidats qui manquent totale
 **Question :** Cite tous les opérateurs d'affectation composée (+=, -=…) et donne un exemple pour chacun.
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
+Les opérateurs d'affectation composée permettent de simplifier l'écriture d'une opération mathématique et d'une réaffectation de variable en même temps (par exemple, `x = x + 5` devient `x += 5`).
 
-...
+Voici la liste des principaux opérateurs :
+
+1. **`+=` (Affectation par addition) :** Ajoute la valeur de droite à la variable.
+   * *Exemple :* `let total = 10; total += 5;` -> `total` vaut `15`.
+2. **`-=` (Affectation par soustraction) :** Soustrait la valeur de droite de la variable.
+   * *Exemple :* `let stock = 10; stock -= 3;` -> `stock` vaut `7`.
+3. **`*=` (Affectation par multiplication) :** Multiplie la variable par la valeur de droite.
+   * *Exemple :* `let prix = 4; prix *= 2;` -> `prix` vaut `8`.
+4. **`/=` (Affectation par division) :** Divise la variable par la valeur de droite.
+   * *Exemple :* `let moitie = 20; moitie /= 2;` -> `moitie` vaut `10`.
+5. **`%=` (Affectation par reste / modulo) :** Calcule le reste de la division de la variable par la valeur de droite.
+   * *Exemple :* `let reste = 10; reste %= 3;` -> `reste` vaut `1` (car 10 / 3 = 3 il reste 1).
+6. **`**=` (Affectation par exponentiation) :** Élève la variable à la puissance de la valeur de droite.
+   * *Exemple :* `let base = 2; base **= 3;` -> `base` vaut `8` (2 à la puissance 3).
 
 **Mon test dans la console :**
 
@@ -252,7 +276,7 @@ parce qu'il permet de repérer instantanément les candidats qui manquent totale
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Assignment
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -262,7 +286,13 @@ parce qu'il permet de repérer instantanément les candidats qui manquent totale
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+
+### 1. Quelle est la différence entre `while` et `do...while` ?
+- **La boucle `while` (pré-testée) :** Elle évalue la condition **avant** d'exécuter le bloc de code. Si la condition est fausse au départ, le code à l'intérieur ne s'exécute **jamais** (0 tour).
+- **La boucle `do...while` (post-testée) :** Elle exécute le bloc de code **au moins une fois** obligatoirement, car la condition est évaluée à la **fin** du premier tour de boucle.
+
+### 2. Que donnerait l'étape 4 avec un `do...while` ?
+Si on part directement de `15 %` avec un `do...while`, la boucle ferait **1 tour complet** : elle retirerait 15 % (la batterie tomberait à 0 %) et passerait le compteur à 1 heure *avant* de vérifier la condition et de s'arrêter. À l'inverse, le `while` classique n'aurait effectué aucun tour.
 
 **Mon test dans la console :**
 
@@ -270,7 +300,7 @@ parce qu'il permet de repérer instantanément les candidats qui manquent totale
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/do...while 
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -290,8 +320,10 @@ Si tu essayes de faire un nouveau calcul avec ce résultat, JavaScript va coller
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
 ```
+PS C:\Users\PATIENT KOM\dw-soir-c-w1-kin-exercices-introduction-a-la-programmation-patientkom97\semaine-13> node A1-livraison.js
+8250
 
-**Source :** 
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Data_structures
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -309,7 +341,8 @@ const totalHeures = heuresSemaine.reduce((accumulateur, heure) => accumulateur +
 **Mon test dans la console :**
 
 ```js
-// colle ici le test que tu as exécuté et le résultat obtenu
+PS C:\Users\PATIENT KOM\dw-soir-c-w1-kin-exercices-introduction-a-la-programmation-patientkom97\semaine-13> node A2-paie.js
+Total : 48 h — Salaire : 130000 FC ; jour le plus chargé : mercredi (10 h).
 ```
 
 **Source :** 
